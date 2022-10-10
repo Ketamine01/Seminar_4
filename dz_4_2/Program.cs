@@ -11,7 +11,7 @@ int SummOfDigits(int number)
     return result;
 }
 
-Console.WriteLine("Введите целожтельное число: ");
+Console.WriteLine("Введите целое положительное число: ");
 int number = Math.Abs(Convert.ToInt32(Console.ReadLine()));
 int result = SummOfDigits(number);
 Console.WriteLine($"Сумма всех цифр числа {number} составляет: {result}");
