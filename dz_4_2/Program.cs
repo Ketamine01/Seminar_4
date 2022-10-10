@@ -1,18 +1,17 @@
 ﻿//Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
-try
+
+int SummOfDigits(int number)
 {
-    Console.WriteLine("Введите целое число");
-    int a = Math.Abs(int.Parse(Console.ReadLine()));
-    int sum = 0;
-    while (a > 99)
+    int result = 0;
+    while (number !=0)
     {
-        sum = sum + a % 10;
-        a = a / 10;
+        result += number % 10;
+        number = number / 10;
     }
-    sum = sum + a % 10 + a / 10;
-    Console.WriteLine($"сумма цифр введенного числа равна {sum}");
+    return result;
 }
-catch
-{
-    Console.WriteLine();
-}
+
+Console.WriteLine("Введите целожтельное число: ");
+int number = Math.Abs(Convert.ToInt32(Console.ReadLine()));
+int result = SummOfDigits(number);
+Console.WriteLine($"Сумма всех цифр числа {number} составляет: {result}");
