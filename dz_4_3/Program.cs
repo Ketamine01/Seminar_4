@@ -2,18 +2,16 @@
 
 void PrintArr(string [] array)
 {
-    int length = array.Length;
-    for (int count = 0; count < length; count++)
+    for (int i = 0; i < array.Length; i++)
     {
-        Console.Write(array[count]);
-        if (count < length - 1)
+        Console.Write(array[i]);
+        if (i < array.Length - 1)
         {
             Console.Write(", ");
         }
     }
 }
-
-string [] arr = new string [8];
+string [] arr = new string [8]; // число 8 длинна массива
 for (int i = 0; i < 8; i++)
 {
     Console.WriteLine($"введите {i + 1}-й элемент массива");
